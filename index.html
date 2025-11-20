@@ -660,6 +660,13 @@
       animation: fadeInDown 0.8s ease-out;
     }
 
+    .section-header p {
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 300;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
     .produtos h2 {
       font-family: 'Playfair Display', serif;
       font-size: 48px;
@@ -674,8 +681,9 @@
     
     .produtos > p {
       font-size: 19px;
-      color: #e0d0ff;
+      color: #ffffff;
       font-weight: 300;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     /* Botão WhatsApp Premium */
@@ -956,9 +964,9 @@
     }
 
     /* Adicionar altura mínima ao conteúdo principal */
-main {
-  min-height: calc(100vh - 80px - 300px); /* altura da tela - header - footer aproximado */
-}
+    main {
+      min-height: calc(100vh - 80px - 300px);
+    }
   </style>
 </head>
 
@@ -1018,7 +1026,6 @@ main {
           <img src="banner amigo.png" alt="Banner ZAVVO" >
         </div>
       </div>
-    </section>
     </section>
 
     <!-- Gola Polo -->
@@ -1178,7 +1185,7 @@ main {
           </div>
         </div>
 
-          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/camisa5/'" data-brand="zara">
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/camisa5/'" data-brand="zara">
           <div class="card-image-wrapper">
             <button class="favorite-btn" onclick="event.stopPropagation()">
               <i class="far fa-heart"></i>
@@ -1247,10 +1254,10 @@ main {
             <div class="preco">R$ 119,90</div>
           </div>
         </div>
-
-        </div>
+      </div>
     </section>
-<!-- shorts -->
+
+    <!-- Shorts -->
     <section id="shorts" class="produtos">
       <button class="voltar" onclick="showCategory('inicio')">
         <i class="fas fa-arrow-left"></i> Voltar
@@ -1277,7 +1284,7 @@ main {
           </div>
         </div>
 
-         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short3/'" data-brand="aramis">
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short3/'" data-brand="aramis">
           <div class="card-image-wrapper">
             <button class="favorite-btn" onclick="event.stopPropagation()">
               <i class="far fa-heart"></i>
@@ -1306,9 +1313,8 @@ main {
             <div class="preco">R$ 84,90</div>
           </div>
         </div>
-
-        
-    
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
