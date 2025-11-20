@@ -345,6 +345,51 @@
       animation: fadeInDown 0.8s ease-out;
     }
 
+/* Banner de Imagem Personalizado */
+.image-banner-section {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.custom-image-banner {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 100px rgba(187, 134, 252, 0.3);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.custom-image-banner::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #bb86fc, #8e5ab8, #6b4091, #bb86fc);
+  background-size: 300% 300%;
+  border-radius: 30px;
+  z-index: -1;
+  animation: gradientShift 4s ease infinite;
+}
+
+.custom-image-banner:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6), 0 0 140px rgba(187, 134, 252, 0.5);
+}
+
+.custom-image-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.custom-image-banner:hover img {
+  transform: scale(1.05);
+}
+
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -960,12 +1005,20 @@ main {
 
   <!-- Conteúdo -->
   <main>
-    <!-- Início -->
+   <!-- Início -->
     <section id="inicio" class="produtos active">
       <div class="hero-section">
         <h2>Bem-vindo à ZAVVO MENSWEAR!</h2>
         <p>Estilo e atitude em cada detalhe</p>
       </div>
+
+      <!-- Banner de Imagem Personalizado -->
+      <div class="image-banner-section">
+        <div class="custom-image-banner">
+          <img src="banner amigo.png" alt="Banner ZAVVO" >
+        </div>
+      </div>
+    </section>
     </section>
 
     <!-- Gola Polo -->
