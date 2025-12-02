@@ -967,6 +967,52 @@
     main {
       min-height: calc(100vh - 80px - 300px);
     }
+
+    /* Estilos para submenu */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.submenu.active {
+  max-height: 500px;
+}
+
+.submenu li {
+  margin: 8px 0;
+}
+
+.submenu li a {
+  font-size: 14px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, rgba(58, 0, 80, 0.2), rgba(46, 0, 62, 0.2));
+  border: 1px solid rgba(187, 134, 252, 0.1);
+}
+
+.submenu li a:hover {
+  background: linear-gradient(135deg, rgba(187, 134, 252, 0.3), rgba(142, 90, 184, 0.3));
+  transform: translateX(5px) scale(1);
+}
+
+.submenu-arrow {
+  margin-left: auto;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.submenu-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+}
+
+    
   </style>
 </head>
 
@@ -1003,13 +1049,44 @@
 
   <!-- Sidebar -->
   <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a onclick="showCategory('inicio')"><i class="fas fa-home"></i><span>Início</span></a></li>
-      <li><a onclick="showCategory('gola-polo')"><i class="fas fa-tshirt"></i><span>Gola Polo</span></a></li>
-      <li><a onclick="showCategory('camisas')"><i class="fas fa-user-tie"></i><span>Camisas</span></a></li>
-      <li><a onclick="showCategory('shorts')"><i class="fas fa-running"></i><span>Shorts</span></a></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><a onclick="showCategory('inicio')"><i class="fas fa-home"></i><span>Início</span></a></li>
+    
+    <li>
+      <a onclick="toggleSubmenu('gola-polo-submenu')"><i class="fas fa-tshirt"></i><span>Gola Polo</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="gola-polo-submenu">
+        <li><a onclick="showBrand('gola-polo', 'brooksfield')">Brooksfield</a></li>
+        <li><a onclick="showBrand('gola-polo', 'lacoste')">Lacoste</a></li>
+        <li><a onclick="showBrand('gola-polo', 'tommy')">Tommy</a></li>
+        <li><a onclick="showBrand('gola-polo', 'boss')">BOSS</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a onclick="toggleSubmenu('camisas-submenu')"><i class="fas fa-user-tie"></i><span>Camisas</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="camisas-submenu">
+        <li><a onclick="showBrand('camisas', 'gucci')">Gucci</a></li>
+        <li><a onclick="showBrand('camisas', 'armani')">Armani</a></li>
+        <li><a onclick="showBrand('camisas', 'calvin klein')">Calvin Klein</a></li>
+        <li><a onclick="showBrand('camisas', 'boss')">BOSS</a></li>
+        <li><a onclick="showBrand('camisas', 'zara')">ZARA</a></li>
+        <li><a onclick="showBrand('camisas', 'balmain')">Balmain</a></li>
+        <li><a onclick="showBrand('camisas', 'lacoste')">Lacoste</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a onclick="toggleSubmenu('shorts-submenu')"><i class="fas fa-running"></i><span>Shorts</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="shorts-submenu">
+        <li><a onclick="showBrand('shorts', 'boss')">BOSS</a></li>
+        <li><a onclick="showBrand('shorts', 'aramis')">Aramis</a></li>
+        <li><a onclick="showBrand('shorts', 'reserva')">Reserva</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+  
 
   <!-- Conteúdo -->
   <main>
@@ -1109,6 +1186,21 @@
           <div class="info">
             <h3>Gola Polo Lacoste</h3>
             <p>O equilíbrio perfeito entre casual e chique.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo6/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 6.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Polo com toque refinado.</p>
             <div class="preco">R$ 89,90</div>
           </div>
         </div>
@@ -1254,6 +1346,162 @@
             <div class="preco">R$ 119,90</div>
           </div>
         </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa10/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 10.1.jpeg" alt="Camisa BOSS">
+          </div>
+          <div class="info">
+            <h3>Camisa BOSS</h3>
+            <p>Sofisticação em cada fio.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+          </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa11/'" data-brand="armani">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 11.1.jpeg" alt="Camisa Armani">
+          </div>
+          <div class="info">
+            <h3>Camisa Armani</h3>
+            <p>O clássico reinventado.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa12/'" data-brand="armani">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 12.1.jpeg" alt="Camisa Armani">
+          </div>
+          <div class="info">
+            <h3>Camisa Armani</h3>
+            <p>Estilo que nunca erra.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa13/'" data-brand="balmain">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 13.1.jpeg" alt="Camisa Balmain">
+          </div>
+          <div class="info">
+            <h3>Camisa Balmain</h3>
+            <p>Beleza nos mínimos detalhes.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa14/'" data-brand="gucci">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="camisa 14.1.jpeg" alt="Camisa Gucci">
+          </div>
+          <div class="info">
+            <h3>Camisa Gucci</h3>
+            <p>Refinamento em forma de camisa.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+        
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa15/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 15.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Visual moderno e impecável.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa16/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 16.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Uma peça para todas as horas.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa17/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 17.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Prática, estilosa e versátil.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa18/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 18.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Da reunião ao jantar.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa19/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 19.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Look elegante em qualquer lugar.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa20/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 20.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Essencial no guarda-roupa.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+    
       </div>
     </section>
 
@@ -1488,6 +1736,69 @@
         grid.appendChild(noResultsDiv);
       }
     }
+
+    // Função para abrir/fechar submenu
+function toggleSubmenu(submenuId) {
+  const submenu = document.getElementById(submenuId);
+  const arrow = event.currentTarget.querySelector('.submenu-arrow');
+  
+  submenu.classList.toggle('active');
+  if (arrow) {
+    arrow.classList.toggle('rotated');
+  }
+}
+
+// Função para mostrar produtos por marca
+function showBrand(categoryId, brand) {
+  // Ativa a categoria
+  document.querySelectorAll(".produtos").forEach(section => {
+    section.classList.remove("active");
+  });
+  document.getElementById(categoryId).classList.add("active");
+  
+  // Filtra os cards pela marca
+  const section = document.getElementById(categoryId);
+  const cards = section.querySelectorAll(".card");
+  let hasResults = false;
+  
+  cards.forEach(card => {
+    const cardBrand = card.getAttribute("data-brand");
+    if (cardBrand && cardBrand.toLowerCase() === brand.toLowerCase()) {
+      card.style.display = "block";
+      hasResults = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+  
+  // Remove mensagem de "sem resultados" antiga
+  const oldNoResults = section.querySelector(".no-results");
+  if (oldNoResults) oldNoResults.remove();
+  
+  // Se não houver resultados, mostra mensagem
+  if (!hasResults) {
+    const grid = section.querySelector(".produtos-grid");
+    const noResultsDiv = document.createElement("div");
+    noResultsDiv.className = "no-results";
+    noResultsDiv.innerHTML = `
+      <i class="fas fa-search"></i>
+      <h3>Nenhum produto dessa marca encontrado</h3>
+      <p>Em breve teremos mais produtos ${brand}</p>
+    `;
+    grid.appendChild(noResultsDiv);
+  }
+  
+  // Fecha a sidebar em mobile
+  if (window.innerWidth <= 1024) {
+    document.getElementById('sidebar').classList.remove("active");
+  }
+  
+  // Limpa o campo de busca
+  document.getElementById("searchInput").value = "";
+  
+  // Rola para o topo
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   </script>
 </body>
 </html>
