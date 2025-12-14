@@ -972,15 +972,28 @@
 .submenu {
   max-height: 0;
   overflow: hidden;
+  overflow-y: auto;
   transition: max-height 0.4s ease;
   list-style: none;
   margin-left: 20px;
 }
 
 .submenu.active {
-  max-height: 500px;
+  max-height: 800px;
 }
 
+.submenu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.submenu::-webkit-scrollbar-track {
+  background: rgba(46, 0, 62, 0.3);
+}
+
+.submenu::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #bb86fc, #8e5ab8);
+  border-radius: 10px;
+}
 .submenu li {
   margin: 8px 0;
 }
@@ -1074,7 +1087,2140 @@
         <li><a onclick="showBrand('camisas', 'balmain')">Balmain</a></li>
         <li><a onclick="showBrand('camisas', 'lacoste')">Lacoste</a></li>
         <li><a onclick="showBrand('camisas', 'louis vuitton')">Louis Vuitton</a></li>
-        <li><a onclick="showBrand('camisas', 'diesel')">Diesel/a></li>
+        <li><a onclick="showBrand('camisas', 'diesel')">Diesel</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a onclick="toggleSubmenu('shorts-submenu')"><i class="fas fa-running"></i><span>Shorts</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="shorts-submenu">
+        <li><a onclick="showBrand('shorts', 'boss')">BOSS</a></li>
+        <li><a onclick="showBrand('shorts', 'aramis')">Aramis</a></li>
+        <li><a onclick="showBrand('shorts', 'reserva')">Reserva</a></li>
+        <li><a onclick="showBrand('shorts', 'tommy')">Tommy</a></li>
+        <li><a onclick="showBrand('shorts', 'polo')">Polo</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+  
+
+  <!-- Conteúdo -->
+  <main>
+   <!-- Início -->
+    <section id="inicio" class="produtos active">
+      <div class="hero-section">
+        <h2>Bem-vindo à ZAVVO MENSWEAR!</h2>
+        <p>Estilo e atitude em cada detalhe</p>
+      </div>
+
+      <!-- Banner de Imagem Personalizado -->
+      <div class="image-banner-section">
+        <div class="custom-image-banner">
+          <img src="banner amigo.png" alt="Banner ZAVVO" >
+        </div>
+      </div>
+    </section>
+
+    <!-- Gola Polo -->
+    <section id="gola-polo" class="produtos">
+      <button class="voltar" onclick="showCategory('inicio')">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+      
+      <div class="section-header">
+        <h2>Coleção Gola Polo</h2>
+        <p>Elegância casual para todas as ocasiões</p>
+      </div>
+
+      <div class="produtos-grid">
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo1/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Destaque</span>
+            <img src="Gola polo 1.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Clássica e versátil para o dia a dia.</p>
+            <div class="preco">R$ 189,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo2/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge new">Novo</span>
+            <img src="Gola polo 2.1.jpeg" alt="Gola Polo Lacoste">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Lacoste</h3>
+            <p>Estilo que nunca sai de moda.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo3/'" data-brand="tommy">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="Gola polo 3.1.jpeg" alt="Gola Polo TOMMY">
+          </div>
+          <div class="info">
+            <h3>Gola Polo TOMMY</h3>
+            <p>Elegância em cada detalhe.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo4/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="Gola polo 4.1.jpeg" alt="Gola Polo Lacoste">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Lacoste</h3>
+            <p>Elegância em cada detalhe.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/GolaPolo5/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 5.1.jpeg" alt="Gola Polo Lacoste">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Lacoste</h3>
+            <p>O equilíbrio perfeito entre casual e chique.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo6/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 6.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Polo com toque refinado.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo7/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 7.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Maciez incomparável.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo8/'" data-brand="calvin klein">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 8.1.jpeg" alt="Gola Polo Calvin Klein">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Calvin Klein</h3>
+            <p>Padrão superior de conforto.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+          </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo9/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 9.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Luxo em forma de polo.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo10/'" data-brand="diesel">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 10.1.jpeg" alt="Gola Polo Diesel">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Diesel</h3>
+            <p>Leve, respirável e macia.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo11/'" data-brand="diesel">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 11.1.jpeg" alt="Gola Polo Diesel">
+          </div>
+          <div class="info">
+            <h3>Gola Polo Diesel</h3>
+            <p>Ideal para uso prolongado.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo12/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 12.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Feita para o seu dia a dia.</p>
+            <div class="preco">R$ 114,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo13/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Popular</span>
+            <img src="Gola polo 13.1.jpeg" alt="Gola Polo BOSS">
+          </div>
+          <div class="info">
+            <h3>Gola Polo BOSS</h3>
+            <p>Bem-estar em cada detalhe.</p>
+            <div class="preco">R$ 114,90</div>
+          </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Camisas -->
+    <section id="camisas" class="produtos">
+      <button class="voltar" onclick="showCategory('inicio')">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+
+      <div class="section-header">
+        <h2>Coleção Camisas</h2>
+        <p>Sofisticação e estilo premium</p>
+      </div>
+
+      <div class="produtos-grid">
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa1/'" data-brand="gucci">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="camisa 1.1.jpeg" alt="Camisa Gucci">
+          </div>
+          <div class="info">
+            <h3>Camisa Gucci</h3>
+            <p>Corte impecável e moderno.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa2/'" data-brand="armani">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 2.1.jpeg" alt="Camisa Armani">
+          </div>
+          <div class="info">
+            <h3>Camisa Armani</h3>
+            <p>Design elegante e versátil.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa3/'" data-brand="calvin klein">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge new">Novo</span>
+            <img src="camisa 3.1.jpeg" alt="Camisa Calvin Klein">
+          </div>
+          <div class="info">
+            <h3>Camisa Calvin Klein</h3>
+            <p>O toque certo de classe.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa4/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 4.1.jpeg" alt="Camisa BOSS">
+          </div>
+          <div class="info">
+            <h3>Camisa BOSS</h3>
+            <p>Visual moderno e imponente.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/camisa5/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 5.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Textura que faz toda a diferença.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Golapolo6/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 6.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Elegância com personalidade.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa7/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 7.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Visual sofisticado e único.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa8/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 8.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Detalhes que elevam o look.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa9/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 9.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Estilo refinado e moderno.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa10/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 10.1.jpeg" alt="Camisa BOSS">
+          </div>
+          <div class="info">
+            <h3>Camisa BOSS</h3>
+            <p>Sofisticação em cada fio.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+          </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa11/'" data-brand="armani">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 11.1.jpeg" alt="Camisa Armani">
+          </div>
+          <div class="info">
+            <h3>Camisa Armani</h3>
+            <p>O clássico reinventado.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa12/'" data-brand="armani">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 12.1.jpeg" alt="Camisa Armani">
+          </div>
+          <div class="info">
+            <h3>Camisa Armani</h3>
+            <p>Estilo que nunca erra.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa13/'" data-brand="balmain">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 13.1.jpeg" alt="Camisa Balmain">
+          </div>
+          <div class="info">
+            <h3>Camisa Balmain</h3>
+            <p>Beleza nos mínimos detalhes.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa14/'" data-brand="gucci">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="camisa 14.1.jpeg" alt="Camisa Gucci">
+          </div>
+          <div class="info">
+            <h3>Camisa Gucci</h3>
+            <p>Refinamento em forma de camisa.</p>
+            <div class="preco">R$ 74,90</div>
+          </div>
+        </div>
+        
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa15/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 15.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Visual moderno e impecável.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa16/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 16.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Uma peça para todas as horas.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa17/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 17.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Prática, estilosa e versátil.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa18/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 18.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Da reunião ao jantar.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa19/'" data-brand="lacoste">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 19.1.jpg" alt="Camisa Lacoste">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Look elegante em qualquer lugar.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+          <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa20/'" data-brand="zara">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 20.1.jpg" alt="Camisa ZARA">
+          </div>
+          <div class="info">
+            <h3>Camisa ZARA</h3>
+            <p>Essencial no guarda-roupa.</p>
+            <div class="preco">R$ 119,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa21/'" data-brand="louis vuitton">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 21.1.jpeg" alt="Camisa Louis Vuitton">
+          </div>
+          <div class="info">
+            <h3>Camisa Louis Vuitton</h3>
+            <p>Presença e bom gosto.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa22/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 22.1.jpeg" alt="Camisa Hugo BOSS">
+          </div>
+          <div class="info">
+            <h3>Camisa Hugo BOSS</h3>
+            <p>Caimento perfeito no corpo.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa23/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 23.1.jpeg" alt="Camisa Hugo BOSS">
+          </div>
+          <div class="info">
+            <h3>Camisa Hugo BOSS</h3>
+            <p>Durabilidade e conforto.</p>
+            <div class="preco">R$ 89,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa24/'" data-brand="diesel">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 24.1.jpeg" alt="Camisa Diesel">
+          </div>
+          <div class="info">
+            <h3>Camisa Diesel</h3>
+            <p>Leveza com alto padrão.</p>
+            <div class="preco">R$ 139,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa25/'" data-brand="louis vuitton">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 25.1.jpeg" alt="Camisa Louis Vuitton">
+          </div>
+          <div class="info">
+            <h3>Camisa Louis Vuitton</h3>
+            <p>Combine com tudo.</p>
+            <div class="preco">R$ 109,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa26/'" data-brand="louis vuitton">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 26.1.jpeg" alt="Camisa Louis Vuitton">
+          </div>
+          <div class="info">
+            <h3>Camisa Louis Vuitton</h3>
+            <p>Vai bem em qualquer ambiente.</p>
+            <div class="preco">R$ 139,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa27/'" data-brand="diesel">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 27.1.jpeg" alt="Camisa Diesel">
+          </div>
+          <div class="info">
+            <h3>Camisa Diesel</h3>
+            <p>Essencial no guarda-roupa.</p>
+            <div class="preco">R$ 139,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Camisa28/'" data-brand="diesel>
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <img src="camisa 28.1.jpeg" alt="Camisa Diesel">
+          </div>
+          <div class="info">
+            <h3>Camisa Lacoste</h3>
+            <p>Essencial no guarda-roupa.</p>
+            <div class="preco">R$ 139,90</div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- Shorts -->
+    <section id="shorts" class="produtos">
+      <button class="voltar" onclick="showCategory('inicio')">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+
+      <div class="section-header">
+        <h2>Coleção Shorts</h2>
+        <p>Elegância com frescor.</p>
+      </div>
+
+      <div class="produtos-grid">
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short1/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 1.1.jpg" alt="Short BOSS">
+          </div>
+          <div class="info">
+            <h3>Short BOSS</h3>
+            <p>Leveza que você sente.</p>
+            <div class="preco">R$ 84,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short3/'" data-brand="aramis">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 3.1.jpg" alt="Short Aramis">
+          </div>
+          <div class="info">
+            <h3>Short Aramis</h3>
+            <p>Sofisticação que respira.</p>
+            <div class="preco">R$ 84,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short2/'" data-brand="reserva">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 2.1.jpg" alt="Short Reserva">
+          </div>
+          <div class="info">
+            <h3>Short Reserva</h3>
+            <p>Naturalmente elegante.</p>
+            <div class="preco">R$ 84,90</div>
+          </div>
+        </div>
+
+         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short4/'" data-brand="tommy">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 4.1.jpeg" alt="Short Tommy">
+          </div>
+          <div class="info">
+            <h3>Short Tommy</h3>
+            <p>Qualidade premium em cada detalhe.</p>
+            <div class="preco">R$ 84,90</div>
+          </div>
+        </div>
+
+         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short5/'" data-brand="polo">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 5.1.jpeg" alt="Short Polo">
+          </div>
+          <div class="info">
+            <h3>Short Polo</h3>
+            <p>Conforto de alto padrão.</p>
+            <div class="preco">R$ 84,90</div>
+          </div>
+        </div>
+
+         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short6/'" data-brand="tommy">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 6.1.jpeg" alt="Short Tommy">
+          </div>
+          <div class="info">
+            <h3>Short Tommy</h3>
+            <p>Toque suave e sofisticado.</p>
+            <div class="preco">R$ 79,90</div>
+          </div>
+        </div>
+
+         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short7/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 7.1.jpeg" alt="Short BOSS">
+          </div>
+          <div class="info">
+            <h3>Short BOSS</h3>
+            <p>Elegância com leveza.</p>
+            <div class="preco">R$ 79,90</div>
+          </div>
+        </div>
+
+         <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short8/'" data-brand="polo">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 8.1.jpeg" alt="Short Polo">
+          </div>
+          <div class="info">
+            <h3>Short Polo</h3>
+            <p>Leveza que surpreende.</p>
+            <div class="preco">R$ 79,90</div>
+          </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='//zavvo-menswear.github.io/Short9/'" data-brand="boss">
+          <div class="card-image-wrapper">
+            <button class="favorite-btn" onclick="event.stopPropagation()">
+              <i class="far fa-heart"></i>
+            </button>
+            <span class="card-badge">Premium</span>
+            <img src="short 7.9.jpeg" alt="Short BOSS">
+          </div>
+          <div class="info">
+            <h3>Short BOSS</h3>
+            <p>O equilíbrio ideal entre conforto e estilo.</p>
+            <div class="preco">R$ 79,90</div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>ZAVVO MENSWEAR</h3>
+        <p>Estilo premium e autêntico para o homem moderno. Qualidade, elegância e confiança em cada peça.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Links Rápidos</h3>
+        <a href="#" onclick="showCategory('gola-polo')">Gola Polo</a>
+        <a href="#" onclick="showCategory('camisas')">Camisas</a>
+        <a href="#" onclick="showCategory('shorts')">Shorts</a>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Atendimento</h3>
+        <p><i class="fas fa-phone"></i> (61) 99859-6685</p>
+        <p><i class="fas fa-envelope"></i> zavvomenswear@gmail.com</p>
+        <p><i class="fas fa-clock"></i> Dom-Dom: 8h às 22h</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 ZAVVO MENSWEAR. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <div class="whatsapp-float" onclick="toggleWhatsappOptions()">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </div>
+  <div class="whatsapp-options" id="whatsappOptions">
+    <a href="https://wa.me/5561998596685?text=Olá! Gostaria de fazer uma compra." target="_blank">
+      <i class="fab fa-whatsapp"></i> Vendedor
+    </a>
+  </div>
+
+  <script>
+    // Header com efeito de scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Sidebar
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // WhatsApp
+    function toggleWhatsappOptions() {
+      const menu = document.getElementById("whatsappOptions");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    // Botão de favorito
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.favorite-btn')) {
+        const btn = e.target.closest('.favorite-btn');
+        const icon = btn.querySelector('i');
+        if (icon.classList.contains('far')) {
+          icon.classList.remove('far');
+          icon.classList.add('fas');
+          btn.style.background = '#bb86fc';
+          icon.style.color = 'white';
+        } else {
+          icon.classList.remove('fas');
+          icon.classList.add('far');
+          btn.style.background = 'rgba(255, 255, 255, 0.95)';
+          icon.style.color = '#bb86fc';
+        }
+      }
+    });
+
+    // Mostrar categorias
+    function showCategory(categoryId) {
+      document.querySelectorAll(".produtos").forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(categoryId).classList.add("active");
+      
+      const section = document.getElementById(categoryId);
+      section.querySelectorAll(".card").forEach(card => {
+        card.style.display = "block";
+      });
+      
+      const noResults = section.querySelector(".no-results");
+      if (noResults) noResults.remove();
+      
+      if (window.innerWidth <= 1024) {
+        document.getElementById('sidebar').classList.remove("active");
+      }
+      
+      document.getElementById("searchInput").value = "";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Busca de produtos
+    function searchProducts(event) {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    }
+
+    function performSearch() {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase().trim();
+      
+      if (searchTerm === "") {
+        document.querySelectorAll(".card").forEach(card => {
+          card.style.display = "block";
+        });
+        const noResults = document.querySelector(".no-results");
+        if (noResults) noResults.remove();
+        return;
+      }
+
+      let hasResults = false;
+
+      document.querySelectorAll(".produtos").forEach(section => {
+        const cards = section.querySelectorAll(".card");
+        let sectionHasResults = false;
+
+        cards.forEach(card => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = "block";
+            sectionHasResults = true;
+            hasResults = true;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        if (sectionHasResults && section.id !== "inicio") {
+          section.classList.add("active");
+        } else if (section.id !== "inicio") {
+          section.classList.remove("active");
+        }
+      });
+
+      document.getElementById("inicio").classList.remove("active");
+
+      const oldNoResults = document.querySelector(".no-results");
+      if (oldNoResults) oldNoResults.remove();
+
+      if (!hasResults) {
+        const activeSection = document.querySelector(".produtos.active") || document.getElementById("gola-polo");
+        activeSection.classList.add("active");
+        
+        const grid = activeSection.querySelector(".produtos-grid");
+        const noResultsDiv = document.createElement("div");
+        noResultsDiv.className = "no-results";
+        noResultsDiv.innerHTML = `
+          <i class="fas fa-search"></i>
+          <h3>Nenhum produto encontrado</h3>
+          <p>Tente buscar por outros termos como "polo", "camisa" ou marcas específicas</p>
+        `;
+        grid.appendChild(noResultsDiv);
+      }
+    }
+
+    // Função para abrir/fechar submenu
+function toggleSubmenu(submenuId) {
+  const submenu = document.getElementById(submenuId);
+  const arrow = event.currentTarget.querySelector('.submenu-arrow');
+  
+  submenu.classList.toggle('active');
+  if (arrow) {
+    arrow.classList.toggle('rotated');
+  }
+}
+
+// Função para mostrar produtos por marca
+function showBrand(categoryId, brand) {
+  // Ativa a categoria
+  document.querySelectorAll(".produtos").forEach(section => {
+    section.classList.remove("active");
+  });
+  document.getElementById(categoryId).classList.add("active");
+  
+  // Filtra os cards pela marca
+  const section = document.getElementById(categoryId);
+  const cards = section.querySelectorAll(".card");
+  let hasResults = false;
+  
+  cards.forEach(card => {
+    const cardBrand = card.getAttribute("data-brand");
+    if (cardBrand && cardBrand.toLowerCase() === brand.toLowerCase()) {
+      card.style.display = "block";
+      hasResults = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+  
+  // Remove mensagem de "sem resultados" antiga
+  const oldNoResults = section.querySelector(".no-results");
+  if (oldNoResults) oldNoResults.remove();
+  
+  // Se não houver resultados, mostra mensagem
+  if (!hasResults) {
+    const grid = section.querySelector(".produtos-grid");
+    const noResultsDiv = document.createElement("div");
+    noResultsDiv.className = "no-results";
+    noResultsDiv.innerHTML = `
+      <i class="fas fa-search"></i>
+      <h3>Nenhum produto dessa marca encontrado</h3>
+      <p>Em breve teremos mais produtos ${brand}</p>
+    `;
+    grid.appendChild(noResultsDiv);
+  }
+  
+  // Fecha a sidebar em mobile
+  if (window.innerWidth <= 1024) {
+    document.getElementById('sidebar').classList.remove("active");
+  }
+  
+  // Limpa o campo de busca
+  document.getElementById("searchInput").value = "";
+  
+  // Rola para o topo
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAVVO MENSWEAR - Estilo Premium</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="logo roxa sem fundo.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0a0015;
+      color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Fundo animado com gradiente e partículas */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(135deg, #0a0015 0%, #1a0033 20%, #2d1b4e 40%, #4a2c6d 60%, #6b4091 80%, #8e5ab8 100%);
+    }
+
+    .animated-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(187, 134, 252, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(142, 90, 184, 0.1) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Partículas flutuantes */
+    .particle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: rgba(187, 134, 252, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float 15s infinite;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+    }
+
+    /* Header aprimorado */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(10, 0, 21, 0.95), rgba(46, 0, 62, 0.95));
+      backdrop-filter: blur(30px);
+      border-bottom: 1px solid rgba(187, 134, 252, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(187, 134, 252, 0.15);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 40px;
+      background: linear-gradient(135deg, rgba(10, 0, 21, 0.98), rgba(46, 0, 62, 0.98));
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+    }
+    
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      animation: slideInLeft 0.6s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    header .logo img {
+      height: 50px;
+      width: auto;
+      filter: drop-shadow(0 0 15px rgba(187, 134, 252, 0.6));
+      transition: transform 0.3s ease;
+    }
+
+    header .logo img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    header .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      background: linear-gradient(135deg, #ffffff 0%, #e0d0ff 50%, #bb86fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(187, 134, 252, 0.6);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      animation: slideInRight 0.6s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box input {
+      width: 350px;
+      padding: 12px 45px 12px 20px;
+      border: 2px solid rgba(187, 134, 252, 0.3);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      color: white;
+      font-size: 14px;
+      transition: all 0.4s ease;
+    }
+
+    .search-box input::placeholder {
+      color: rgba(224, 208, 255, 0.6);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(187, 134, 252, 0.8);
+      box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
+      width: 400px;
+    }
+
+    .search-box button {
+      position: absolute;
+      right: 6px;
+      background: linear-gradient(135deg, #bb86fc, #8e5ab8);
+      border: none;
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+    }
+
+    .search-box button:hover {
+      background: linear-gradient(135deg, #d4a8ff, #bb86fc);
+      transform: scale(1.15) rotate(90deg);
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      color: #bb86fc;
+      transition: all 0.3s ease;
+    }
+    
+    .menu-toggle:hover {
+      color: #e0d0ff;
+      transform: scale(1.2);
+    }
+
+    /* Sidebar aprimorada */
+    .sidebar {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 280px;
+      height: calc(100vh - 80px);
+      background: linear-gradient(180deg, rgba(10, 0, 21, 0.95), rgba(29, 0, 41, 0.98));
+      backdrop-filter: blur(30px);
+      border-right: 1px solid rgba(187, 134, 252, 0.2);
+      color: white;
+      padding: 40px 20px;
+      transition: transform 0.4s ease;
+      overflow-y: auto;
+      box-shadow: 10px 0 40px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+    
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .sidebar::-webkit-scrollbar-track {
+      background: rgba(46, 0, 62, 0.5);
+    }
+    
+    .sidebar::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #bb86fc, #8e5ab8);
+      border-radius: 10px;
+    }
+    
+    .sidebar ul {
+      list-style: none;
+    }
+    
+    .sidebar ul li {
+      margin: 0 0 15px 0;
+      animation: fadeInUp 0.5s ease-out backwards;
+    }
+
+    .sidebar ul li:nth-child(1) { animation-delay: 0.1s; }
+    .sidebar ul li:nth-child(2) { animation-delay: 0.2s; }
+    .sidebar ul li:nth-child(3) { animation-delay: 0.3s; }
+    .sidebar ul li:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .sidebar ul li a {
+      color: #e0d0ff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 22px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(74, 0, 114, 0.3), rgba(58, 0, 80, 0.3));
+      border: 1px solid rgba(187, 134, 252, 0.15);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .sidebar ul li a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(187, 134, 252, 0.4), transparent);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .sidebar ul li a:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+    
+    .sidebar ul li a:hover {
+      background: linear-gradient(135deg, rgba(187, 134, 252, 0.4), rgba(142, 90, 184, 0.4));
+      border-color: rgba(187, 134, 252, 0.6);
+      color: #ffffff;
+      transform: translateX(10px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(187, 134, 252, 0.3);
+    }
+    
+    .sidebar ul li a i {
+      font-size: 22px;
+      width: 28px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .sidebar ul li a span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Conteúdo */
+    main {
+      margin-left: 280px;
+      padding: 120px 40px 100px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .produtos {
+      display: none;
+    }
+    
+    .produtos.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Hero Banner Premium */
+    .hero-section {
+      margin-bottom: 60px;
+      text-align: center;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+/* Banner de Imagem Personalizado */
+.image-banner-section {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.custom-image-banner {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 100px rgba(187, 134, 252, 0.3);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.custom-image-banner::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #bb86fc, #8e5ab8, #6b4091, #bb86fc);
+  background-size: 300% 300%;
+  border-radius: 30px;
+  z-index: -1;
+  animation: gradientShift 4s ease infinite;
+}
+
+.custom-image-banner:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6), 0 0 140px rgba(187, 134, 252, 0.5);
+}
+
+.custom-image-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.custom-image-banner:hover img {
+  transform: scale(1.05);
+}
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 0%, #e0d0ff 30%, #bb86fc 60%, #8e5ab8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 60px rgba(187, 134, 252, 0.4);
+      letter-spacing: 2px;
+    }
+
+    .hero-section p {
+      font-size: 22px;
+      color: #e0d0ff;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .hero-banner {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 100px rgba(187, 134, 252, 0.2);
+      transition: all 0.5s ease;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #bb86fc, #8e5ab8, #6b4091, #bb86fc);
+      background-size: 300% 300%;
+      border-radius: 30px;
+      z-index: -1;
+      animation: gradientShift 4s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hero-banner:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 120px rgba(187, 134, 252, 0.4);
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-banner:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Grade de produtos aprimorada */
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 35px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    /* Cards Premium */
+    .card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 255, 0.95));
+      backdrop-filter: blur(20px);
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(187, 134, 252, 0.15);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      border: 2px solid rgba(187, 134, 252, 0.2);
+      animation: cardFloat 0.6s ease-out backwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes cardFloat {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(135deg, #bb86fc, #8e5ab8, #6b4091);
+      border-radius: 28px;
+      opacity: 0;
+      transition: opacity 0.5s;
+      z-index: -1;
+    }
+    
+    .card:hover::before {
+      opacity: 1;
+    }
+    
+    .card:hover {
+      transform: translateY(-20px) scale(1.05);
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.4), 0 0 60px rgba(187, 134, 252, 0.5);
+    }
+
+    .card-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+    }
+    
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    
+    .card:hover img {
+      transform: scale(1.15) rotate(2deg);
+    }
+
+    /* Badge de destaque */
+    .card-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .card-badge.new {
+      background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    }
+
+    /* Botão de favorito */
+    .favorite-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .favorite-btn:hover {
+      background: #bb86fc;
+      transform: scale(1.15) rotate(10deg);
+    }
+
+    .favorite-btn i {
+      font-size: 20px;
+      color: #bb86fc;
+      transition: color 0.3s;
+    }
+
+    .favorite-btn:hover i {
+      color: white;
+    }
+    
+    .card .info {
+      padding: 28px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 243, 255, 0.97));
+    }
+    
+    .card .info h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #2e003e;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .card:hover .info h3 {
+      color: #6b4091;
+    }
+    
+    .card .info p {
+      font-size: 15px;
+      color: #5a4570;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .card .preco {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #bb86fc, #8e5ab8);
+      padding: 14px 28px;
+      border-radius: 25px;
+      display: inline-block;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(187, 134, 252, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card .preco::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+    }
+
+    .card .preco:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .card .preco:hover {
+      background: linear-gradient(135deg, #d4a8ff, #bb86fc);
+      transform: scale(1.1);
+      box-shadow: 0 10px 35px rgba(187, 134, 252, 0.6);
+    }
+
+    /* Títulos das seções */
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .section-header p {
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 300;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .produtos h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #ffffff 0%, #e0d0ff 50%, #bb86fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      text-shadow: 0 0 50px rgba(187, 134, 252, 0.4);
+      letter-spacing: 1px;
+    }
+    
+    .produtos > p {
+      font-size: 19px;
+      color: #ffffff;
+      font-weight: 300;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Botão WhatsApp Premium */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #25D366, #1ebe5c);
+      color: white;
+      border-radius: 50px;
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
+      transition: all 0.4s ease;
+      z-index: 1000;
+      cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .whatsapp-float:hover {
+      background: linear-gradient(135deg, #1ebe5c, #128c43);
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 15px 45px rgba(37, 211, 102, 0.6);
+      animation: none;
+    }
+    
+    .whatsapp-float i {
+      font-size: 26px;
+    }
+
+    .whatsapp-options {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 255, 0.98));
+      backdrop-filter: blur(30px);
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      z-index: 1001;
+      border: 2px solid rgba(187, 134, 252, 0.3);
+    }
+    
+    .whatsapp-options a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 25px;
+      text-decoration: none;
+      color: #2e003e;
+      font-weight: 700;
+      transition: all 0.3s;
+      border-bottom: 1px solid rgba(187, 134, 252, 0.15);
+    }
+    
+    .whatsapp-options a:last-child {
+      border-bottom: none;
+    }
+    
+    .whatsapp-options a:hover {
+      background: linear-gradient(135deg, rgba(187, 134, 252, 0.2), rgba(224, 208, 255, 0.2));
+      padding-left: 30px;
+    }
+    
+    .whatsapp-options i {
+      color: #25d366;
+      font-size: 24px;
+    }
+
+    /* Botão Voltar Premium */
+    .voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, rgba(187, 134, 252, 0.9), rgba(142, 90, 184, 0.9));
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 25px rgba(187, 134, 252, 0.4);
+    }
+    
+    .voltar:hover {
+      background: linear-gradient(135deg, rgba(212, 168, 255, 0.9), rgba(187, 134, 252, 0.9));
+      transform: translateX(-8px);
+      box-shadow: 0 12px 35px rgba(187, 134, 252, 0.5);
+    }
+
+    /* Mensagem sem resultados */
+    .no-results {
+      text-align: center;
+      padding: 80px 20px;
+      color: #e0d0ff;
+      grid-column: 1 / -1;
+    }
+
+    .no-results i {
+      font-size: 100px;
+      margin-bottom: 30px;
+      opacity: 0.4;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .no-results h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .no-results p {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
+    /* Footer Premium */
+    footer {
+      background: linear-gradient(135deg, rgba(10, 0, 21, 0.98), rgba(29, 0, 41, 0.98));
+      backdrop-filter: blur(30px);
+      color: #e0d0ff;
+      padding: 50px 40px 30px;
+      margin-left: 280px;
+      border-top: 1px solid rgba(187, 134, 252, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff, #bb86fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #b8a9c9;
+      font-size: 14px;
+      line-height: 1.8;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-section a:hover {
+      color: #bb86fc;
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(187, 134, 252, 0.2);
+      font-size: 14px;
+      color: #9b8aaa;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(187, 134, 252, 0.2), rgba(142, 90, 184, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bb86fc;
+      font-size: 20px;
+      transition: all 0.3s;
+      border: 1px solid rgba(187, 134, 252, 0.3);
+    }
+
+    .social-icons a:hover {
+      background: linear-gradient(135deg, #bb86fc, #8e5ab8);
+      color: white;
+      transform: translateY(-5px) rotate(360deg);
+      box-shadow: 0 10px 25px rgba(187, 134, 252, 0.4);
+    }
+
+    /* Responsividade */
+    @media (max-width: 1024px) {
+      main {
+        margin-left: 0;
+        padding: 120px 30px 80px;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 12px 20px;
+      }
+
+      header .logo h1 {
+        display: none;
+      }
+
+      .search-box input {
+        width: 200px;
+      }
+
+      .search-box input:focus {
+        width: 250px;
+      }
+
+      main {
+        padding: 100px 20px 60px;
+      }
+
+      .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .hero-section h2 {
+        font-size: 38px;
+      }
+
+      .hero-banner img {
+        height: 250px;
+      }
+
+      .produtos h2 {
+        font-size: 32px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    /* Adicionar altura mínima ao conteúdo principal */
+    main {
+      min-height: calc(100vh - 80px - 300px);
+    }
+
+    /* Estilos para submenu */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: max-height 0.4s ease;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.submenu.active {
+  max-height: 800px;
+}
+
+.submenu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.submenu::-webkit-scrollbar-track {
+  background: rgba(46, 0, 62, 0.3);
+}
+
+.submenu::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #bb86fc, #8e5ab8);
+  border-radius: 10px;
+}
+.submenu li {
+  margin: 8px 0;
+}
+
+.submenu li a {
+  font-size: 14px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, rgba(58, 0, 80, 0.2), rgba(46, 0, 62, 0.2));
+  border: 1px solid rgba(187, 134, 252, 0.1);
+}
+
+.submenu li a:hover {
+  background: linear-gradient(135deg, rgba(187, 134, 252, 0.3), rgba(142, 90, 184, 0.3));
+  transform: translateX(5px) scale(1);
+}
+
+.submenu-arrow {
+  margin-left: auto;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.submenu-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+}
+
+    
+  </style>
+</head>
+
+<body>
+  <!-- Fundo Animado -->
+  <div class="animated-bg"></div>
+  
+  <!-- Partículas -->
+  <script>
+    for(let i = 0; i < 30; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 15 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      document.body.appendChild(particle);
+    }
+  </script>
+
+  <!-- Cabeçalho -->
+  <header id="header">
+    <div class="logo">
+      <img src="logo.png" alt="ZAVVO Logo">
+      <h1>ZAVVO MENSWEAR</h1>
+    </div>
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar produtos..." onkeyup="searchProducts(event)">
+        <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+  <ul>
+    <li><a onclick="showCategory('inicio')"><i class="fas fa-home"></i><span>Início</span></a></li>
+    
+    <li>
+      <a onclick="toggleSubmenu('gola-polo-submenu')"><i class="fas fa-tshirt"></i><span>Gola Polo</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="gola-polo-submenu">
+        <li><a onclick="showBrand('gola-polo', 'lacoste')">Lacoste</a></li>
+        <li><a onclick="showBrand('gola-polo', 'tommy')">Tommy</a></li>
+        <li><a onclick="showBrand('gola-polo', 'boss')">BOSS</a></li>
+        <li><a onclick="showBrand('gola-polo', 'calvin klein')">Calvin Klein</a></li>
+        <li><a onclick="showBrand('gola-polo', 'diesel')">Diesel</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a onclick="toggleSubmenu('camisas-submenu')"><i class="fas fa-user-tie"></i><span>Camisas</span><i class="fas fa-chevron-down submenu-arrow"></i></a>
+      <ul class="submenu" id="camisas-submenu">
+        <li><a onclick="showBrand('camisas', 'gucci')">Gucci</a></li>
+        <li><a onclick="showBrand('camisas', 'armani')">Armani</a></li>
+        <li><a onclick="showBrand('camisas', 'calvin klein')">Calvin Klein</a></li>
+        <li><a onclick="showBrand('camisas', 'boss')">BOSS</a></li>
+        <li><a onclick="showBrand('camisas', 'zara')">ZARA</a></li>
+        <li><a onclick="showBrand('camisas', 'balmain')">Balmain</a></li>
+        <li><a onclick="showBrand('camisas', 'lacoste')">Lacoste</a></li>
+        <li><a onclick="showBrand('camisas', 'louis vuitton')">Louis Vuitton</a></li>
+        <li><a onclick="showBrand('camisas', 'diesel')">Diesel</a></li>
       </ul>
     </li>
     
